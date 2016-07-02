@@ -1,0 +1,30 @@
+{
+  "name": "react-radio-button",
+  "version": "1.0.0",
+  "description": "A react radio button component",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tan31989/react-radio-button.git"
+  },
+  "keywords": [
+    "radio-button",
+    "react",
+    "redux",
+    "es6"
+  ],
+  "author": "Nagaraj Tantri (nagarajtantri@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tan31989/react-radio-button/issues"
+  },
+  "homepage": "https://github.com/tan31989/react-radio-button#readme",
+  "dependencies": {
+    "react": "^15.2.0",
+    "react-redux": "^4.4.5",
+    "redux": "^3.5.2"
+  }
+}
