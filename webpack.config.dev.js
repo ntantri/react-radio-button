@@ -3,7 +3,6 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const publicPath = '/static/';
 
-
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
   entry: [
@@ -53,16 +52,12 @@ module.exports = {
         include: path.join(__dirname, 'src')
       },
       {
+        test: /\.scss$/,
+        loader: 'style!css!sass'
+      },
+      {
         test: /\.less$/,
         loader: 'style!css!less'
-      },
-      {
-        test: /\.css$/,
-        loader: 'style!css'
-      },
-      {
-        test: /\.(png|jpg|jpeg|gif)$/,
-        loader: 'url-loader?limit=8192'
       }
     ]
   }

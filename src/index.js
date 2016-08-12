@@ -1,13 +1,13 @@
-import 'babel-polyfill'
+import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from './App.js';
+import App from '~/containers/App.js';
 
-const history = syncHistoryWithStore(hashHistory, store);
+import './styles/radiobutton.less';
 
 
 ReactDOM.render(
-  <App className="div-container" store={store} history={hashHistory}/>,
+  <App className="div-container" />,
   document.getElementById('root')
 );

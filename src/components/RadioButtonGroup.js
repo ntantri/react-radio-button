@@ -1,8 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import { connect } from 'react-redux';
-
-
-import '~/styles/radiobutton.less';
 
 
 class RadioButtonGroup extends Component {
@@ -50,4 +46,4 @@ RadioButtonGroup.propTypes = {
 };
 
 
-export default connect()(RadioButtonGroup)
+export default RadioButtonGroup;
