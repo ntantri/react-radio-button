@@ -1,5 +1,10 @@
 # react-radio-button
 This is a use case for radio button group-able react component. ES6 based syntax.
+Requires Bootstrap.
+
+Example:
+
+![Example Image](./example.png?raw=true "Radio Buttons")
 
 
 Usage:
