@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/tan31989/react-radio-button#readme",
   "dependencies": {
+    "bootstrap": "^3.3.7",
     "css-loader": "^0.23.1",
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
@@ -43,8 +44,9 @@
     "babel-preset-react-hmre": "^1.0.0",
     "babel-preset-stage-0": "^6.5.0",
     "babel-root-import": "^3.2.2",
-    "express": "^4.14.0",
     "eventsource-polyfill": "^0.9.6",
+    "express": "^4.14.0",
+    "file-loader": "^0.9.0",
     "html-webpack-plugin": "^2.22.0",
     "less": "^2.7.1",
     "webpack": "^1.13.1",
