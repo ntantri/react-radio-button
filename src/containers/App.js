@@ -10,7 +10,6 @@ export default class App extends Component {
     	selectedValue: undefined,
     	radioOptions: [
 	      { value: 'CreditCard', text: 'Credit Card' },
-	      { value: 'DebitCard', text: 'Debit Card'},
 	      { value: 'DebitCard', text: 'Debit Card'}
 	    ]
   	};
