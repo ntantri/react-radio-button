@@ -9,30 +9,43 @@ Example:
 
 Usage:
 ```javascript
+import React, { Component, PropTypes } from 'react';
 
-class OptionForm extends Component {
+import RadioButtonGroup from '~/components/RadioButtonGroup';
+
+
+export default class App extends Component {
 	constructor(props) {
-		super(props);
-		this.state = {selectedContract: ''};
-	}
+    super(props);
+    this.state = {
+    	selectedValue: undefined,
+    	radioOptions: [
+	      { value: 'CreditCard', text: 'Credit Card' },
+	      { value: 'DebitCard', text: 'Debit Card'}
+	    ]
+  	};
+  }
+
+  handleSelection(value) {
+  	this.setState({selectedValue: value});
+  }
 
 	render() {
-		const radioOptions = [
-			{ value: 'agree', text: 'I Agree' }, 
-			{ value: 'disagree', text: 'I Disagree'}
-		];
-		const renderContract = (value) => {
-			this.setState({selectedContract: value});
-		};
-
 		return (
-			<div>
-				<form method="Post" action="/save">
-					<div><input type="text" ref="txtName"></div>
-    				<RadioButtonGroup listOfItems={radioOptions} selectedItemCallback={renderContract.bind(this)} />
-    			</form>
-    		</div>
-    	);
+			<div className="container">
+				<div className="row">
+					<div className="col-xs-12">
+						<h2> Welcome for the radio button example</h2>
+					</div>
+					<div className="col-xs-12">
+						<RadioButtonGroup listOfItems={this.state.radioOptions} selectedItemCallback={(value) => this.handleSelection(value)}/>
+					</div>
+					<div className="col-xs-12">
+						<h4>Selected radio button: <i>{this.state.selectedValue}</i></h4>
+					</div>
+				</div>
+			</div>
+		);
 	}
 }
 ```
