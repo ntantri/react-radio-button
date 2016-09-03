@@ -5,7 +5,9 @@
   "main": "src/index.js",
   "scripts": {
     "dev": "NODE_ENV=development npm start",
-    "start": "webpack --config webpack.config.dev.js && node devServer.js"
+    "start": "webpack --config webpack.config.dev.js && node devServer.js",
+    "build": "webpack --config webpack.config.build.js",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -25,13 +27,9 @@
   "homepage": "https://github.com/tan31989/react-radio-button#readme",
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "css-loader": "^0.23.1",
-    "less": "^2.7.1",
-    "less-loader": "^2.2.3",
     "react": "^15.2.0",
     "react-redux": "^4.4.5",
-    "redux": "^3.5.2",
-    "style-loader": "^0.13.1"
+    "redux": "^3.5.2"
   },
   "devDependencies": {
     "babel-core": "^6.3.15",
@@ -43,11 +41,15 @@
     "babel-preset-react-hmre": "^1.0.0",
     "babel-preset-stage-0": "^6.5.0",
     "babel-root-import": "^3.2.2",
+    "css": "^2.2.1",
+    "css-loader": "^0.23.1",
     "eventsource-polyfill": "^0.9.6",
     "express": "^4.14.0",
     "file-loader": "^0.9.0",
     "html-webpack-plugin": "^2.22.0",
     "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "style-loader": "^0.13.1",
     "webpack": "^1.13.1",
     "webpack-dev-middleware": "^1.6.1",
     "webpack-hot-middleware": "^2.12.2"

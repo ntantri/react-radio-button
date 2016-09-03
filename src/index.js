@@ -4,8 +4,6 @@ import ReactDOM from 'react-dom';
 
 import App from '~/containers/App.js';
 
-import './styles/radiobutton.less';
-
 
 ReactDOM.render(
   <App className="div-container" />,

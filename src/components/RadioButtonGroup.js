@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 
+import '~/styles/radiobutton.less';
 
 class RadioButtonGroup extends Component {
 
