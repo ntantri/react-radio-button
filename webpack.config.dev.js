@@ -6,8 +6,6 @@ const publicPath = '/static/';
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
   entry: [
-    'babel-polyfill',
-    'eventsource-polyfill', // necessary for hot reloading with IE
     'webpack-hot-middleware/client',
     './src/index'
   ],

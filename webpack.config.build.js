@@ -3,8 +3,6 @@ const webpack = require('webpack');
 
 module.exports = {
   entry: [
-    'babel-polyfill',
-    'eventsource-polyfill', // necessary for hot reloading with IE
     './src/components/RadioButtonGroup.js'
   ],
   output: {
@@ -32,5 +30,9 @@ module.exports = {
         loader: 'file-loader'
       }
     ]
+  },
+  externals: {
+    "react": "React",
+    "react-dom": "ReactDOM"
   }
 };

@@ -1,8 +1,8 @@
 {
   "name": "react-radio-button",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "A react radio button component with an additional pinch of CSS applied.",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "dev": "NODE_ENV=development npm start",
     "start": "webpack --config webpack.config.dev.js && node devServer.js",
