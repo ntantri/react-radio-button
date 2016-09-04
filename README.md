@@ -1,6 +1,11 @@
 # react-radio-button
 This is a use case for radio button group-able react component. ES6 based syntax.
-Requires Bootstrap.
+
+How to install:
+```sh
+npm install react-radio-button
+```
+
 
 Example:
 
@@ -11,41 +16,41 @@ Usage:
 ```javascript
 import React, { Component, PropTypes } from 'react';
 
-import RadioButtonGroup from '~/components/RadioButtonGroup';
+import RadioButtonGroup from 'react-radio-button';
 
 
 export default class App extends Component {
-	constructor(props) {
+  constructor(props) {
     super(props);
     this.state = {
-    	selectedValue: undefined,
-    	radioOptions: [
-	      { value: 'CreditCard', text: 'Credit Card' },
-	      { value: 'DebitCard', text: 'Debit Card'}
-	    ]
-  	};
+      selectedValue: undefined,
+      radioOptions: [
+	{ value: 'CreditCard', text: 'Credit Card' },
+	{ value: 'DebitCard', text: 'Debit Card'}
+      ]
+    };
   }
 
   handleSelection(value) {
-  	this.setState({selectedValue: value});
+    this.setState({selectedValue: value});
   }
 
-	render() {
-		return (
-			<div className="container">
-				<div className="row">
-					<div className="col-xs-12">
-						<h2> Welcome for the radio button example</h2>
-					</div>
-					<div className="col-xs-12">
-						<RadioButtonGroup listOfItems={this.state.radioOptions} selectedItemCallback={(value) => this.handleSelection(value)}/>
-					</div>
-					<div className="col-xs-12">
-						<h4>Selected radio button: <i>{this.state.selectedValue}</i></h4>
-					</div>
-				</div>
-			</div>
-		);
-	}
+  render() {
+    return (
+      <div className="container">
+	<div className="row">
+	  <div className="col-xs-12">
+	    <h2> Welcome for the radio button example</h2>
+	  </div>
+	  <div className="col-xs-12">
+	    <RadioButtonGroup listOfItems={this.state.radioOptions} selectedItemCallback={(value) => this.handleSelection(value)}/>
+	  </div>
+	  <div className="col-xs-12">
+	    <h4>Selected radio button: <i>{this.state.selectedValue}</i></h4>
+	  </div>
+	</div>
+      </div>
+    );
+  }
 }
 ```
