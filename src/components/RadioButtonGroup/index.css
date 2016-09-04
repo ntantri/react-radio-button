@@ -61,8 +61,8 @@
 }
 
 .radio-button-item > input[type="radio"] {
-    position: absolute;
-    clip: rect(0, 0, 0, 0);
+    position: absolute  !important;
+    clip: rect(0, 0, 0, 0) !important;
     pointer-events: none;
 }
 

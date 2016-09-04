@@ -1,8 +1,8 @@
+import './index.css';
+
 import React, { Component, PropTypes } from 'react';
 
-import '~/styles/radiobutton.less';
-
-class RadioButtonGroup extends Component {
+export default class RadioButtonGroup extends Component {
 
   constructor(props) {
     super(props);
@@ -45,5 +45,3 @@ RadioButtonGroup.propTypes = {
   selectedItemCallback: PropTypes.func.isRequired
 };
 
-
-export default RadioButtonGroup;

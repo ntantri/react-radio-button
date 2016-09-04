@@ -24,7 +24,7 @@
     "url": "https://github.com/tan31989/react-radio-button/issues"
   },
   "homepage": "https://github.com/tan31989/react-radio-button#readme",
-  "dependencies": {
+  "peerDependencies": {
     "react": "^15.2.0"
   },
   "devDependencies": {
