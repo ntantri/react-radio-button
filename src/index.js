@@ -2,6 +2,9 @@ import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import "bootstrap/less/bootstrap.less";
+
+
 import App from '~/containers/App.js';
 
 

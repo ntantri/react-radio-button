@@ -1,12 +1,12 @@
 {
   "name": "react-radio-button",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "A react radio button component with an additional pinch of CSS applied.",
   "main": "lib/index.js",
   "scripts": {
     "dev": "NODE_ENV=development npm start",
     "start": "webpack --config webpack.config.dev.js && node devServer.js",
-    "build": "webpack --config webpack.config.build.js",
+    "build": "NODE_ENV=production webpack --config webpack.config.build.js",
     "prepublish": "npm run build"
   },
   "repository": {
@@ -16,7 +16,6 @@
   "keywords": [
     "radio-button",
     "react",
-    "redux",
     "es6"
   ],
   "author": "Nagaraj Tantri (nagarajtantri@gmail.com)",
@@ -26,10 +25,7 @@
   },
   "homepage": "https://github.com/tan31989/react-radio-button#readme",
   "dependencies": {
-    "bootstrap": "^3.3.7",
-    "react": "^15.2.0",
-    "react-redux": "^4.4.5",
-    "redux": "^3.5.2"
+    "react": "^15.2.0"
   },
   "devDependencies": {
     "babel-core": "^6.3.15",
@@ -41,6 +37,7 @@
     "babel-preset-react-hmre": "^1.0.0",
     "babel-preset-stage-0": "^6.5.0",
     "babel-root-import": "^3.2.2",
+    "bootstrap": "^3.3.7",
     "css": "^2.2.1",
     "css-loader": "^0.23.1",
     "eventsource-polyfill": "^0.9.6",

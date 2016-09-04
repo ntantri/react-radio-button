@@ -21,7 +21,7 @@ class RadioButtonGroup extends Component {
     const renderItems = (item) => {
       return (
           <label key={item.value}
-            className={'btn btn-default radio-button-item ' + (this.state.optionsVal === item.value ? 'checked' : '')}>
+            className={'btn-item radio-button-item ' + (this.state.optionsVal === item.value ? 'checked' : '')}>
               <input type="radio" name="options" value={item.value}
                 checked={this.state.optionsVal === item.value}
                 onChange={(e) => this.handleQueryOpChange(e)} id={item.value} />
@@ -32,7 +32,7 @@ class RadioButtonGroup extends Component {
     };
 
     return (
-      <div data-toggle="buttons">
+      <div>
         {this.listOfItems.map((item) => renderItems(item))}
       </div>
     );

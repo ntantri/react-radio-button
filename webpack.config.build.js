@@ -9,6 +9,11 @@ module.exports = {
     path: path.join(__dirname, 'lib'),
     filename: 'index.js'
   },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('development')
+    })
+  ],
   module: {
     loaders: [
       {
@@ -20,19 +25,7 @@ module.exports = {
       {
         test: /\.less$/,
         loader: 'style!css!less'
-      },
-      {
-        test: /\.css$/,
-        loader: 'style!css'
-      },
-      {
-        test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
-        loader: 'file-loader'
       }
     ]
-  },
-  externals: {
-    "react": "React",
-    "react-dom": "ReactDOM"
   }
 };
