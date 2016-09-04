@@ -18,15 +18,14 @@ import React, { Component, PropTypes } from 'react';
 
 import RadioButtonGroup from 'react-radio-button';
 
-
 export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       selectedValue: undefined,
       radioOptions: [
-	{ value: 'CreditCard', text: 'Credit Card' },
-	{ value: 'DebitCard', text: 'Debit Card'}
+    	{ value: 'CreditCard', text: 'Credit Card' },
+    	{ value: 'DebitCard', text: 'Debit Card'}
       ]
     };
   }
@@ -38,17 +37,17 @@ export default class App extends Component {
   render() {
     return (
       <div className="container">
-	<div className="row">
-	  <div className="col-xs-12">
-	    <h2> Welcome for the radio button example</h2>
-	  </div>
-	  <div className="col-xs-12">
-	    <RadioButtonGroup listOfItems={this.state.radioOptions} selectedItemCallback={(value) => this.handleSelection(value)}/>
-	  </div>
-	  <div className="col-xs-12">
-	    <h4>Selected radio button: <i>{this.state.selectedValue}</i></h4>
-	  </div>
-	</div>
+        <div className="row">
+          <div className="col-xs-12">
+      	    <h2> Welcome for the radio button example</h2>
+      	  </div>
+      	  <div className="col-xs-12">
+      	    <RadioButtonGroup listOfItems={this.state.radioOptions} selectedItemCallback={(value) => this.handleSelection(value)}/>
+      	  </div>
+      	  <div className="col-xs-12">
+      	    <h4>Selected radio button: <i>{this.state.selectedValue}</i></h4>
+      	  </div>
+      	</div>
       </div>
     );
   }
