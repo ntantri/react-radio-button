@@ -1,4 +1,5 @@
-# react-radio-button
+# react-radio-button 
+[![npm:](https://img.shields.io/badge/npm-latest-green.svg)](https://www.npmjs.com/packages/react-radio-button)
 This react component is a div based radio button group. Simple to use and access.
 
 
