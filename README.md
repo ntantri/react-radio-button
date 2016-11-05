@@ -11,7 +11,7 @@ npm install react-radio-button
 
 Example:
 
-![Example Image](./example.png?raw=true "Radio Buttons")
+![Example Image](https://lh3.googleusercontent.com/-CZHBUmhCH4w/WB3G1Gi_ufI/AAAAAAAAF0Q/-37gi3zBF9kBdCIgqU5RssPhp8wLFJregCJoC/w239-h45-p-rw/example.png?raw=true "Radio Buttons")
 
 
 Usage:
