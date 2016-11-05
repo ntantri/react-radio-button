@@ -21,7 +21,7 @@ export default class RadioButtonGroup extends Component {
     const renderItems = (item) => {
       return (
           <label key={item.value}
-            className={'btn-item radio-button-item ' + (this.state.optionsVal === item.value ? 'checked' : '')}>
+            className={'btn-item radio-button-item ' + (this.state.optionsVal === item.value ? 'checked' : 'not-checked')}>
               <input type="radio" name="options" value={item.value}
                 checked={this.state.optionsVal === item.value}
                 onChange={(e) => this.handleQueryOpChange(e)} id={item.value} />

@@ -16,19 +16,19 @@ import RadioButtonGroup from '~/components/RadioButtonGroup';
 
 export default class App extends Component {
 	constructor(props) {
-    super(props);
-    this.state = {
-    	selectedValue: undefined,
-    	radioOptions: [
-	      { value: 'CreditCard', text: 'Credit Card' },
-	      { value: 'DebitCard', text: 'Debit Card'}
-	    ]
-  	};
-  }
+		super(props);
+		this.state = {
+			selectedValue: undefined,
+			radioOptions: [
+				{ value: 'CreditCard', text: 'Credit Card' },
+				{ value: 'DebitCard', text: 'Debit Card'}
+			]
+		};
+	}
 
-  handleSelection(value) {
-  	this.setState({selectedValue: value});
-  }
+	handleSelection(value) {
+		this.setState({selectedValue: value});
+	}
 
 	render() {
 		return (
@@ -48,4 +48,56 @@ export default class App extends Component {
 		);
 	}
 }
+```
+
+##Customing button colors (The default colors are shown below):
+
+Add these to your custom css file and should be ideally changing the color for which ever color scheme you use.
+
+
+###With not selected state:
+
+```css
+.not-checked {
+    background-color: #ffffff !important;
+    border-color: #ccc !important;
+}
+```
+
+###With selected state:
+
+```css
+.checked {
+    background-color: #7d9c47 !important;
+}
+
+.radio-button-item > input[type="radio"]:checked+span:after {
+  background-color: #426C2A !important;
+}
+
+.radio-button-item > input[type="radio"]:checked+span+span{
+    color: #fff !important;
+}
+```
+
+
+###On hover, the color to change:
+
+```css
+.radio-button-item:hover .radio-dot:before {
+    border-color: #bdde85 !important;
+}
+
+.radio-button-item:hover .radio-dot:after {
+    background-color: #bef65b !important;
+}
+```
+
+Once added to a custom css file (example: test.css), do import the same as:
+
+```javascript
+import React, { Component, PropTypes } from 'react';
+
+import RadioButtonGroup from '~/components/RadioButtonGroup';
+import './test.css'  // Relative path
 ```
