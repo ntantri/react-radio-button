@@ -1,6 +1,6 @@
 {
   "name": "react-radio-button",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "A react radio button component with an additional pinch of CSS applied.",
   "main": "lib/index.js",
   "scripts": {
