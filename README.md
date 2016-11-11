@@ -57,7 +57,7 @@ export default class App extends Component {
 }
 ```
 
-###props to the ```<RadioButtonGroup listOfItems={<items>} selectedItemCallback={callbck} />
+###props to the ```<RadioButtonGroup listOfItems={<items>} selectedItemCallback={callbck} />```
 
 ###listOfItems (PropTypes.array):
   The items that need to appear on the radio items, is in the format (array):
