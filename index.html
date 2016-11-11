@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>React-radio-button by tan31989</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">React-radio-button</h1>
+      <h2 class="project-tagline">React: div like radio button (group-able) react component.</h2>
+      <a href="https://github.com/tan31989/react-radio-button" class="btn">View on GitHub</a>
+      <a href="https://github.com/tan31989/react-radio-button/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/tan31989/react-radio-button/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="react-radio-button" class="anchor" href="#react-radio-button" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>react-radio-button</h1>
+
+<p><a href="https://www.npmjs.com/packages/react-radio-button"><img src="https://img.shields.io/badge/npm-latest-green.svg" alt="npm:"></a>
+This react component is a div based radio button group. Simple to use and access.</p>
+
+<p>How to install:</p>
+
+<div class="highlight highlight-source-shell"><pre>npm install react-radio-button</pre></div>
+
+<p>Example:
+<img src="https://lh3.googleusercontent.com/-CZHBUmhCH4w/WB3G1Gi_ufI/AAAAAAAAF0Q/-37gi3zBF9kBdCIgqU5RssPhp8wLFJregCJoC/w239-h45-p-rw/example.png?raw=true" alt="Example Image" title="Radio Buttons"></p>
+
+<p>Usage:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">import</span> <span class="pl-smi">React</span>, { <span class="pl-smi">Component</span>, <span class="pl-smi">PropTypes</span> } <span class="pl-k">from</span> <span class="pl-s"><span class="pl-pds">'</span>react<span class="pl-pds">'</span></span>;
+
+<span class="pl-k">import</span> <span class="pl-smi">RadioButtonGroup</span> <span class="pl-k">from</span> <span class="pl-s"><span class="pl-pds">'</span>react-radio-button<span class="pl-pds">'</span></span>;
+
+<span class="pl-k">export</span> <span class="pl-v">default</span> <span class="pl-k">class</span> <span class="pl-en">App</span> <span class="pl-k">extends</span> <span class="pl-e">Component</span> {
+
+    <span class="pl-en">constructor</span>(<span class="pl-smi">props</span>) {
+        <span class="pl-v">super</span>(props);
+        <span class="pl-v">this</span>.<span class="pl-smi">state</span> <span class="pl-k">=</span> {
+            selectedValue<span class="pl-k">:</span> <span class="pl-c1">undefined</span>,
+            radioOptions<span class="pl-k">:</span> [
+                { value<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>CreditCard<span class="pl-pds">'</span></span>, text<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>Credit Card<span class="pl-pds">'</span></span> },
+                { value<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>DebitCard<span class="pl-pds">'</span></span>, text<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>Debit Card<span class="pl-pds">'</span></span>}
+            ]
+        };
+    }
+
+    <span class="pl-en">handleSelection</span>(<span class="pl-smi">value</span>) {
+        <span class="pl-v">this</span>.<span class="pl-en">setState</span>({selectedValue<span class="pl-k">:</span> value});
+    }
+
+  <span class="pl-en">render</span>() {
+    <span class="pl-k">return</span> (
+      <span class="pl-k">&lt;</span>div className<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>container<span class="pl-pds">"</span></span><span class="pl-k">&gt;</span>
+        <span class="pl-k">&lt;</span>div className<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>row<span class="pl-pds">"</span></span><span class="pl-k">&gt;</span>
+          <span class="pl-k">&lt;</span>div className<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>col-xs-12<span class="pl-pds">"</span></span><span class="pl-k">&gt;</span>
+            <span class="pl-k">&lt;</span>h2<span class="pl-k">&gt;</span> Welcome <span class="pl-k">for</span> the radio button example<span class="pl-k">&lt;</span><span class="pl-k">/</span>h2<span class="pl-k">&gt;</span>
+          <span class="pl-k">&lt;</span><span class="pl-k">/</span>div<span class="pl-k">&gt;</span>
+          <span class="pl-k">&lt;</span>div className<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>col-xs-12<span class="pl-pds">"</span></span><span class="pl-k">&gt;</span>
+            <span class="pl-k">&lt;</span>RadioButtonGroup listOfItems<span class="pl-k">=</span>{<span class="pl-v">this</span>.<span class="pl-smi">state</span>.<span class="pl-smi">radioOptions</span>} selectedItemCallback<span class="pl-k">=</span>{(<span class="pl-smi">value</span>) <span class="pl-k">=&gt;</span> <span class="pl-v">this</span>.<span class="pl-en">handleSelection</span>(value)}<span class="pl-k">/</span><span class="pl-k">&gt;</span>
+          <span class="pl-k">&lt;</span><span class="pl-k">/</span>div<span class="pl-k">&gt;</span>
+          <span class="pl-k">&lt;</span>div className<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>col-xs-12<span class="pl-pds">"</span></span><span class="pl-k">&gt;</span>
+            <span class="pl-k">&lt;</span>h4<span class="pl-k">&gt;</span>Selected radio button<span class="pl-k">:</span> <span class="pl-k">&lt;</span>i<span class="pl-k">&gt;</span>{<span class="pl-v">this</span>.<span class="pl-smi">state</span>.<span class="pl-smi">selectedValue</span>}<span class="pl-k">&lt;</span><span class="pl-k">/</span>i<span class="pl-k">&gt;&lt;</span><span class="pl-k">/</span>h4<span class="pl-k">&gt;</span>
+          <span class="pl-k">&lt;</span><span class="pl-k">/</span>div<span class="pl-k">&gt;</span>
+        <span class="pl-k">&lt;</span><span class="pl-k">/</span>div<span class="pl-k">&gt;</span>
+      <span class="pl-k">&lt;</span><span class="pl-k">/</span>div<span class="pl-k">&gt;</span>
+    );
+  }
+}</pre></div>
+
+<h3>
+<a id="props-to-the-radiobuttongroup-listofitemsitems-selecteditemcallbackcallbck-" class="anchor" href="#props-to-the-radiobuttongroup-listofitemsitems-selecteditemcallbackcallbck-" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>props to the <code>&lt;RadioButtonGroup listOfItems={&lt;items&gt;} selectedItemCallback={callbck} /&gt;</code>
+</h3>
+
+<h3>
+<a id="listofitems-proptypesarray" class="anchor" href="#listofitems-proptypesarray" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>listOfItems (PropTypes.array):</h3>
+
+<p>The items that need to appear on the radio items, is in the format (array):
+    <code>javascript
+    radioOptions: [
+        { value: 'CreditCard', text: 'Credit Card' },
+        { value: 'DebitCard', text: 'Debit Card'}
+    ]
+</code>
+    where,
+    <code>value</code> is the value we get on radio button selection
+    <code>text</code> is the display of the radio button</p>
+
+<h3>
+<a id="selecteditemcallback-proptypesfunc" class="anchor" href="#selecteditemcallback-proptypesfunc" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>selectedItemCallback (PropTypes.func)</h3>
+
+<p>The callback that is invoked when a radio button is clicked (function):
+  <code>(value) =&gt; handleSelection(value)</code>
+  where,</p>
+
+<div class="highlight highlight-source-js"><pre>    <span class="pl-en">handleSelection</span>(<span class="pl-smi">value</span>) {  <span class="pl-c">//value is the selected value, like "CreditCard" or "DebitCard"</span>
+        <span class="pl-v">this</span>.<span class="pl-en">setState</span>({selectedValue<span class="pl-k">:</span> value});
+    }</pre></div>
+
+<h2>
+<a id="customing-button-colors-the-default-colors-are-shown-below" class="anchor" href="#customing-button-colors-the-default-colors-are-shown-below" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Customing button colors (The default colors are shown below):</h2>
+
+<p>Add these to your custom css file and should be ideally changing the color for which ever color scheme you use.</p>
+
+<h3>
+<a id="with-not-selected-state" class="anchor" href="#with-not-selected-state" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>With not selected state:</h3>
+
+<div class="highlight highlight-source-css"><pre><span class="pl-e">.not-checked</span> {
+    <span class="pl-c1"><span class="pl-c1">background-color</span></span>: <span class="pl-c1">#ffffff</span> <span class="pl-k">!important</span>;
+    <span class="pl-c1"><span class="pl-c1">border-color</span></span>: <span class="pl-c1">#ccc</span> <span class="pl-k">!important</span>;
+}</pre></div>
+
+<h3>
+<a id="with-selected-state" class="anchor" href="#with-selected-state" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>With selected state:</h3>
+
+<div class="highlight highlight-source-css"><pre><span class="pl-e">.checked</span> {
+    <span class="pl-c1"><span class="pl-c1">background-color</span></span>: <span class="pl-c1">#7d9c47</span> <span class="pl-k">!important</span>;
+}
+
+<span class="pl-e">.radio-button-item</span> &gt; <span class="pl-ent">input</span>[type="radio"]<span class="pl-e">:checked</span>+<span class="pl-ent">span</span><span class="pl-e">:after</span> {
+  <span class="pl-c1"><span class="pl-c1">background-color</span></span>: <span class="pl-c1">#426C2A</span> <span class="pl-k">!important</span>;
+}
+
+<span class="pl-e">.radio-button-item</span> &gt; <span class="pl-ent">input</span>[type="radio"]<span class="pl-e">:checked</span>+<span class="pl-ent">span</span>+<span class="pl-ent">span</span>{
+    <span class="pl-c1"><span class="pl-c1">color</span></span>: <span class="pl-c1">#fff</span> <span class="pl-k">!important</span>;
+}</pre></div>
+
+<h3>
+<a id="on-hover-the-color-to-change" class="anchor" href="#on-hover-the-color-to-change" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>On hover, the color to change:</h3>
+
+<div class="highlight highlight-source-css"><pre><span class="pl-e">.radio-button-item</span><span class="pl-e">:hover</span> <span class="pl-e">.radio-dot</span><span class="pl-e">:before</span> {
+    <span class="pl-c1"><span class="pl-c1">border-color</span></span>: <span class="pl-c1">#bdde85</span> <span class="pl-k">!important</span>;
+}
+
+<span class="pl-e">.radio-button-item</span><span class="pl-e">:hover</span> <span class="pl-e">.radio-dot</span><span class="pl-e">:after</span> {
+    <span class="pl-c1"><span class="pl-c1">background-color</span></span>: <span class="pl-c1">#bef65b</span> <span class="pl-k">!important</span>;
+}</pre></div>
+
+<p>Once added to a custom css file (example: test.css), do import the same as:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">import</span> <span class="pl-smi">React</span>, { <span class="pl-smi">Component</span>, <span class="pl-smi">PropTypes</span> } <span class="pl-k">from</span> <span class="pl-s"><span class="pl-pds">'</span>react<span class="pl-pds">'</span></span>;
+
+<span class="pl-k">import</span> <span class="pl-smi">RadioButtonGroup</span> <span class="pl-k">from</span> <span class="pl-s"><span class="pl-pds">'</span>~/components/RadioButtonGroup<span class="pl-pds">'</span></span>;
+<span class="pl-k">import</span> <span class="pl-s"><span class="pl-pds">'</span>./test.css<span class="pl-pds">'</span></span>  <span class="pl-c">// Relative path</span></pre></div>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/tan31989/react-radio-button">React-radio-button</a> is maintained by <a href="https://github.com/tan31989">tan31989</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
