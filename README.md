@@ -61,12 +61,15 @@ export default class App extends Component {
 
 ###listOfItems (PropTypes.array):
   The items that need to appear on the radio items, is in the format (array):
-   radioOptions: [
-	  { value: 'CreditCard', text: 'Credit Card' },
-	  { value: 'DebitCard', text: 'Debit Card'}
-   ]
-  ```value``` is the value we get on radio button selection
-  ```text``` is the display of the radio button
+    ```javascript
+    radioOptions: [
+        { value: 'CreditCard', text: 'Credit Card' },
+	    { value: 'DebitCard', text: 'Debit Card'}
+    ]
+    ```
+    where,
+    ```value``` is the value we get on radio button selection
+    ```text``` is the display of the radio button
 
 ###selectedItemCallback (PropTypes.func)
   The callback that is invoked when a radio button is clicked (function):
