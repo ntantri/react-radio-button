@@ -1,4 +1,4 @@
-# react-radio-button 
+# react-radio-button
 [![npm:](https://img.shields.io/badge/npm-latest-green.svg)](https://www.npmjs.com/packages/react-radio-button)
 This react component is a div based radio button group. Simple to use and access.
 
@@ -56,6 +56,27 @@ export default class App extends Component {
   }
 }
 ```
+
+###props to the ```<RadioButtonGroup listOfItems={<items>} selectedItemCallback={callbck} />
+
+###listOfItems (PropTypes.array):
+  The items that need to appear on the radio items, is in the format (array):
+   radioOptions: [
+	  { value: 'CreditCard', text: 'Credit Card' },
+	  { value: 'DebitCard', text: 'Debit Card'}
+   ]
+  ```value``` is the value we get on radio button selection
+  ```text``` is the display of the radio button
+
+###selectedItemCallback (PropTypes.func)
+  The callback that is invoked when a radio button is clicked (function):
+  ```(value) => handleSelection(value) ```
+  where,
+  ```javascript
+    handleSelection(value) {  //value is the selected value, like "CreditCard" or "DebitCard"
+	    this.setState({selectedValue: value});
+    }
+  ```
 
 ##Customing button colors (The default colors are shown below):
 
