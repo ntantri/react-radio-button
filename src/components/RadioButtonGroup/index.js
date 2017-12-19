@@ -7,7 +7,7 @@ export default class RadioButtonGroup extends Component {
   constructor(props) {
     super(props);
     this.listOfItems = props.listOfItems;
-    this.state = {optionsVal: ''};
+    this.state = {optionsVal: props.checked};
   }
 
   handleQueryOpChange(e) {
