@@ -81,6 +81,14 @@ export default class App extends Component {
     }
   ```
 
+###checked - optional
+  Set checked prop equal to the value of the item that you wish to be checked by default. 
+
+  example: 
+  ```javascript
+  <RadioButtonGroup listOfItems={this.state.radioOptions} selectedItemCallback={(value) => this.handleSelection(value)} checked='CreditCard'/>
+  ````
+ 
 ##Customing button colors (The default colors are shown below):
 
 Add these to your custom css file and should be ideally changing the color for which ever color scheme you use.
