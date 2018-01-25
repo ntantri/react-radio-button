@@ -6,7 +6,6 @@ export default class RadioButtonGroup extends Component {
 
   constructor(props) {
     super(props);
-    this.listOfItems = props.listOfItems;
     this.state = {optionsVal: ''};
   }
 
@@ -33,7 +32,7 @@ export default class RadioButtonGroup extends Component {
 
     return (
       <div>
-        {this.listOfItems.map((item) => renderItems(item))}
+        {this.props.listOfItems.map((item) => renderItems(item))}
       </div>
     );
   }
@@ -44,4 +43,3 @@ RadioButtonGroup.propTypes = {
   listOfItems: PropTypes.array,
   selectedItemCallback: PropTypes.func.isRequired
 };
-
